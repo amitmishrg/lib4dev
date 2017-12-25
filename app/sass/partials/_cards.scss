@@ -127,7 +127,15 @@
         }
       }
     }
+    .github-view {
+      width: 15px;
+      position: absolute;
+      margin: 2px 0 0 1px;
+    }
     a {
+      text-decoration: none;
+    }
+    .view {
       background: #739ffc;
       color: #fff;
       padding: 7px 20px;

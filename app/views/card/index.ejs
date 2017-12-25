@@ -21,11 +21,16 @@
     <footer>
       <ul>
         <li>
-          <img src="/svg/forks.svg" />
-          <span><%= numberKFormatter(item.forks) %></span>
+            <img src="/svg/forks.svg" />
+            <span><%= numberKFormatter(item.forks) %></span>
+        </li>
+        <li>
+          <a href="<%= item.html_url %>" target="_blank">
+            <img src="/svg/github.svg" class="github-view"/>
+          </a>
         </li>
       </ul>
-      <a class="show-loader" href="/info/<%= item.owner.login %>/<%= item.name %>">View</a>
+      <a class="view show-loader" href="/info/<%= item.owner.login %>/<%= item.name %>">View</a>
     </footer>
   </div>
 <% }); %>
