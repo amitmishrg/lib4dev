@@ -3,6 +3,7 @@ const constant = require('../constant/index');
 const common = require('../utils/common');
 
 let init = async (req, res) => {
+
   try {
     let topic = common.getTopic(req);
     let url = common.constructHomeApiEndPoint(req);

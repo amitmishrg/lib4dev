@@ -4,7 +4,7 @@ let constructHomeApiEndPoint = req => {
   let sort = req.query.s || '';
   let page = req.query.p || 1;
   let topic = getTopic(req);
-  return `${api.search.endPoint}?sort=${sort}&order=${api.search.order}&q=topic:${topic}&page=${page}`;
+  return `${api.search.endPoint}?sort=${sort}&order=${api.search.order}&q=${topic}&page=${page}`;
 }
 
 let getTopic = req => {

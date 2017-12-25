@@ -14,7 +14,7 @@
       <ul id="option-list">
         <% Object.keys(options).forEach(function(item) { %>
           <li>
-            <a href="/topics/<%= topic %>?s=<%= item %>" class="<%= (sort === item) ? 'active': '' %>">
+            <a href="/topics/<%= topic %>?s=<%= item %>" class="show-loader <%= (sort === item) ? 'active': '' %>">
               <%= options[item] %>
             </a>
           </li>

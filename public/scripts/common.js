@@ -11,5 +11,13 @@
     $('#main').toggleClass('push');
   });
 
+  $("#menu").on('click', function() {
+    $('.sidebar').toggleClass('show');
+    $('#main').toggleClass('push');
+  });
+
+  $('.show-loader').on('click', function() {
+    $('.loader').show();
+  })
 
 })();

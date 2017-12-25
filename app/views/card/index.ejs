@@ -5,7 +5,7 @@
         <img src="<%= item.owner.avatar_url %>" />
       </div>
       <div class="title">
-        <a href="/info/<%= item.owner.login %>/<%= item.name %>">
+        <a class="show-loader" href="/info/<%= item.owner.login %>/<%= item.name %>">
           <h4 title="<%= item.full_name %>"><%= item.name %></h4>
         </a>
       </div>
@@ -25,7 +25,7 @@
           <span><%= item.forks %></span>
         </li>
       </ul>
-      <a href="/info/<%= item.owner.login %>/<%= item.name %>">View</a>
+      <a class="show-loader" href="/info/<%= item.owner.login %>/<%= item.name %>">View</a>
     </footer>
   </div>
 <% }); %>
