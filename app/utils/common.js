@@ -21,7 +21,12 @@ let getTopic = req => {
   return topic;
 }
 
+let numberKFormatter = num => {
+  return num > 999 ? (num/1000).toFixed(1) + 'k' : num;
+}
+
   module.exports = {
     constructHomeApiEndPoint,
-    getTopic
+    getTopic,
+    numberKFormatter
   }

@@ -21,7 +21,8 @@ let init = async (req, res) => {
         tags: constant.tags,
         options: constant.options,
         pages: pageNumber,
-        current: req.query.p || 1
+        current: req.query.p || 1,
+        numberKFormatter: common.numberKFormatter
       }
       res.render('home', pageData);
       console.log(pageData);

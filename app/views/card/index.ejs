@@ -11,7 +11,7 @@
       </div>
       <div class="star-bg"></div>
       <div class="star">
-        <span><%= item.watchers %></span>
+        <span><%= numberKFormatter(item.stargazers_count) %></span>
         <img src="/svg/star.svg" />
       </div>
     </header>
@@ -22,7 +22,7 @@
       <ul>
         <li>
           <img src="/svg/forks.svg" />
-          <span><%= item.forks %></span>
+          <span><%= numberKFormatter(item.forks) %></span>
         </li>
       </ul>
       <a class="show-loader" href="/info/<%= item.owner.login %>/<%= item.name %>">View</a>
