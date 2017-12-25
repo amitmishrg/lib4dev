@@ -1,0 +1,19 @@
+<% include header/index.ejs %>
+<div class="main-container">
+  <aside class="sidebar">
+    <% include sidebar/index.ejs %>
+  </aside>
+  <main>
+    <% include header/top-header.ejs %>
+    <% include filter/index.ejs %>
+    <div class="row">
+      <div class="card-section">
+        <% include card/index.ejs %>
+      </div>
+    </div>
+    <div class="row">
+      <% include pagination/index.ejs %>
+    </div>
+  </main>
+</div>
+<% include footer/index.ejs %>

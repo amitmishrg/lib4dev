@@ -1,0 +1,48 @@
+.sidebar {
+  background: #323552;
+  width: 350px;
+  position: fixed;
+  overflow-y: auto;
+  height: 100%;
+  .wrapper {
+    .logo-wrapper {
+      background: rgba(68, 70, 95, 0.93);
+      text-align: center;
+      padding: 50px 0;
+    }
+    .lists {
+      padding: 30px 0 15px 30px;
+      border-top: 1px solid rgba(152,177,227,.16);
+      h4 {
+        font-size: 18px;
+        color: #fff;
+        background: rgba(214,72,93,.98);
+        padding: 10px 15px;
+        border-radius: 30px 0 0 30px;
+        font-weight: normal;
+      }
+      ul {
+        padding-left: 15px;
+        margin-top: 10px;
+        li {
+          margin:5px 0;
+          a {
+            font-size: 18px;
+            padding: 8px 15px;
+            color: #fff;
+            display: block;
+            text-decoration: none;
+            border-radius: 30px 0 0 30px;
+            text-transform: capitalize;
+            &:hover {
+              background: rgba(152, 177, 227, .16);
+            }
+            &.active {
+              background: rgba(152, 177, 227, .16);
+            }
+          }
+        }
+      }
+    }
+  }
+}

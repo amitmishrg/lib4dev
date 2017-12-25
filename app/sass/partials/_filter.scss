@@ -1,0 +1,78 @@
+.filter-section {
+  margin-top: 125px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  margin-bottom: 30px;
+  .total-result {
+    position: relative;
+    top: 5px;
+    span {
+      font-size: 16px;
+      font-weight: 500;
+      color: #739FFC;
+    }
+  }
+  .filter-wrapper {
+    position: relative;
+    display: flex;
+    span {
+      background: #739ffc;
+      font-size: 14px;
+      font-weight: 400;
+      display: inline-block;
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 5px 0 0 5px;
+    }
+    .option-wrapper {
+      position: relative;
+      width: 180px;
+      .selected {
+        color: #323552;
+        font-size: 14px;
+        background: #fff;
+        border: 1px solid #f2f2f2;
+        padding: 7px 10px;
+        cursor: pointer;
+      }
+      .icon {
+        position: absolute;
+        top: 6px;
+        right: 10px;
+
+      }
+    }
+
+    .options {
+      position: absolute;
+      right: 0;
+      z-index: 1;
+      top: 34px;
+      display: none;
+      ul {
+        background: #fff;
+        list-style: none;
+        width: 180px;
+        box-shadow: 1px 1px 5px rgba(0,0,0,.23);
+        padding: 0;
+        a {
+          display: block;
+          text-decoration: none;
+          color: #323552;
+          font-size: 12px;
+          font-weight: 500;
+          border-bottom: 1px solid #E6E6E8;
+          padding: 7px 15px;
+          cursor: pointer;
+          &:hover {
+            background: #F7F7F7;
+          }
+          &.active {
+            background: #F7F7F7;
+          }
+        }
+      }
+    }
+  }
+}

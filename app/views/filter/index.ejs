@@ -1,0 +1,25 @@
+<div class="filter-section">
+  <div class="total-result">
+    <span>Found <%- totalCount %> repository</span>
+  </div>
+  <div class="filter-wrapper">
+    <span>Sort by</span>
+    <div class="option-wrapper" id="option-wrapper">
+      <div class="selected"><%= options[sort] %></div>
+      <div class="icon">
+        <embed type="image/svg+xml" src="/svg/arrow.svg" />
+      </div>
+    </div>
+    <div class="options">
+      <ul id="option-list">
+        <% Object.keys(options).forEach(function(item) { %>
+          <li>
+            <a href="/topics/<%= topic %>?s=<%= item %>" class="<%= (sort === item) ? 'active': '' %>">
+              <%= options[item] %>
+            </a>
+          </li>
+        <% }); %>
+      </ul>
+    </div>
+  </div>
+</div>

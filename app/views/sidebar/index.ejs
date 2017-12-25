@@ -1,0 +1,23 @@
+<div class="wrapper">
+  <div class="logo-wrapper">
+    <a href="/">
+      <embed type="image/svg+xml" src="/svg/logo.svg" />
+    </a>
+  </div>
+  <div class="lists">
+    <h4>Popular Language</h4>
+    <ul>
+      <% languages.forEach(function(item) { %>
+        <li><a href="/topics/<%= item %>" class=<%- (topic == item) ? 'active': '' %>><%= item %></a></li>
+      <% }); %>
+    </ul>
+  </div>
+  <div class="lists">
+    <h4>Popular Topics</h4>
+    <ul>
+      <% Object.keys(tags).forEach(function(item) { %>
+        <li><a href="/topics/<%= item %>" class=<%- (topic == item) ? 'active': '' %>><%= tags[item] %></a></li>
+      <% }); %>
+    </ul>
+  </div>
+</div>

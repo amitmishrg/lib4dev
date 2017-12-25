@@ -1,0 +1,112 @@
+.card-container {
+  background: #FFFFFF;
+  box-shadow: 1px 6px 20px rgba(164, 164, 164, .3);
+  padding: 15px;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+  header {
+    display: flex;
+    .logo {
+      width: 50px;
+      height: 50px;
+      background: #FAFAFC;
+      text-align: center;
+      border-radius: 50%;
+      img {
+        vertical-align: middle;
+        max-width: 100%;
+        border-radius: 50%;
+      }
+      h3 {
+        font-size: 30px;
+        line-height: 60px;
+        color: #739FFC;
+      }
+    }
+    .title {
+      margin-left: 10px;
+      h4 {
+        font-size: 16px;
+        line-height: 50px;
+        color: #323552;
+        text-transform: capitalize;
+      }
+    }
+    .star-bg {
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: rgba(247, 75, 95, .03);
+      position: absolute;
+      right: -190px;
+      top: -230px;
+    }
+    .star {
+      position: absolute;
+      right: 30px;
+      span {
+        font-size: 14px;
+        color: #D0D0D0;
+      }
+      i {
+
+      }
+    }
+  }
+  .body {
+    margin-top: 15px;
+    p {
+      color: #858797;
+      font-size: 14px;
+      height: 60px;
+    }
+    .tags {
+      ul {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        li {
+          font-size: 10px;
+          line-height: 12px;
+          color: #FC7B7D;
+          border: 1px solid #FC7B7D;
+          padding: 3px 5px;
+          margin-right: 10px;
+          border-radius: 4px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    ul {
+      padding: 0;
+      list-style: none;
+      display: flex;
+      margin: 0;
+      li {
+        margin-right: 10px;
+        span {
+          font-size: 12px;
+          color: #7A7D97;
+        }
+      }
+    }
+    a {
+      background: #739ffc;
+      color: #fff;
+      padding: 7px 20px;
+      border-radius: 20px;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 12px;
+      line-height: 14px;
+      margin-top: -9px;
+    }
+  }
+}
