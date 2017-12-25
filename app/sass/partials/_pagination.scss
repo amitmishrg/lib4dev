@@ -13,6 +13,12 @@
     border-color: #739ffc;
     cursor: default;
   }
+  .pagination>.disabled>a, .pagination>.disabled>a:focus, .pagination>.disabled>a:hover, .pagination>.disabled>span, .pagination>.disabled>span:focus, .pagination>.disabled>span:hover {
+    color: #777;
+    background-color: #fff;
+    border-color: #ddd;
+    cursor: not-allowed;
+  }
   .pagination>li>a, .pagination>li>span {
     position: relative;
     float: left;

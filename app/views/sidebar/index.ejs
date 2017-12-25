@@ -8,7 +8,7 @@
     <h4>Popular Language</h4>
     <ul>
       <% languages.forEach(function(item) { %>
-        <li><a href="/topics/<%= item %>" class="show-loader" <%- (topic == item) ? 'active': '' %>><%= item %></a></li>
+        <li><a href="/topics/<%= item %>" class="show-loader <%- (topic == item) ? 'active': '' %>"><%= item %></a></li>
       <% }); %>
     </ul>
   </div>
@@ -16,7 +16,7 @@
     <h4>Popular Topics</h4>
     <ul>
       <% Object.keys(tags).forEach(function(item) { %>
-        <li><a href="/topics/<%= item %>" class="show-loader" <%- (topic == item) ? 'active': '' %>><%= tags[item] %></a></li>
+        <li><a href="/topics/<%= item %>" class="show-loader <%- (topic == item) ? 'active': '' %>" ><%= tags[item] %></a></li>
       <% }); %>
     </ul>
   </div>

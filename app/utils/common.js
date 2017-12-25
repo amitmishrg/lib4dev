@@ -1,4 +1,6 @@
 const api = require('../config/api_endpoint');
+const constant = require('../constant/index');
+
 
 let constructHomeApiEndPoint = req => {
   let sort = req.query.s || '';
@@ -21,12 +23,29 @@ let getTopic = req => {
   return topic;
 }
 
-let numberKFormatter = num => {
+let pageNumber = response => {
+  let perPage = constant.pagination.perPage;
+  let totalNumber = '';
+  if (response.total_count > 1000 ) {
+    totalNumber = Math.ceil(1000 / perPage);
+  } else {
+    totalNumber = Math.ceil(response.total_count / perPage);
+  }
+  return totalNumber;
+}
+
+const numberKFormatter = num => {
   return num > 999 ? (num/1000).toFixed(1) + 'k' : num;
+}
+
+const numberWithCommas = (x) => {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
   module.exports = {
     constructHomeApiEndPoint,
     getTopic,
-    numberKFormatter
+    numberKFormatter,
+    numberWithCommas,
+    pageNumber
   }
