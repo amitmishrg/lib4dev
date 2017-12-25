@@ -1,21 +1,33 @@
 .sidebar {
   background: #323552;
-  width: 350px;
+  width: 300px;
   position: fixed;
   overflow-y: auto;
   height: 100%;
   @media only screen and (max-width: 900px) {
-      transform: translateX(-360px);
+      width: 250px;
+      transform: translateX(-250px);
+      z-index: 11;
   }
   .wrapper {
     .logo-wrapper {
       background: rgba(68, 70, 95, 0.93);
       text-align: center;
       padding: 50px 0;
+      @media only screen and (max-width: 900px) {
+        padding: 20px 0;
+        embed {
+          width: 70px;
+        }
+      }
+
     }
     .lists {
-      padding: 30px 0 15px 30px;
+      padding: 30px 0 15px 20px;
       border-top: 1px solid rgba(152,177,227,.16);
+      @media only screen and (max-width: 900px) {
+        padding: 20px 0 5px 15px;
+      }
       h4 {
         font-size: 18px;
         color: #fff;
@@ -23,6 +35,10 @@
         padding: 10px 15px;
         border-radius: 30px 0 0 30px;
         font-weight: normal;
+        @media only screen and (max-width: 900px) {
+          font-size: 14px;
+          padding: 8px 15px;
+        }
       }
       ul {
         padding-left: 15px;
@@ -37,6 +53,10 @@
             text-decoration: none;
             border-radius: 30px 0 0 30px;
             text-transform: capitalize;
+            @media only screen and (max-width: 900px) {
+              font-size: 14px;
+              padding: 4px 10px;
+            }
             &:hover {
               background: rgba(152, 177, 227, .16);
             }

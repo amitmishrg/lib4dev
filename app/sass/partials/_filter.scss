@@ -1,12 +1,18 @@
 .filter-section {
-  margin-top: 125px;
+  margin-top: 95px;
   display: flex;
   justify-content: space-between;
   padding: 0 30px;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
+  @media only screen and (max-width: 500px) {
+    justify-content: flex-end;
+  }
   .total-result {
     position: relative;
     top: 5px;
+    @media only screen and (max-width: 500px) {
+      display: none;
+    }
     span {
       font-size: 16px;
       font-weight: 500;
@@ -28,6 +34,9 @@
     .option-wrapper {
       position: relative;
       width: 180px;
+      @media only screen and (max-width: 500px) {
+        width: 140px;
+      }
       .selected {
         color: #323552;
         font-size: 14px;
@@ -56,6 +65,9 @@
         width: 180px;
         box-shadow: 1px 1px 5px rgba(0,0,0,.23);
         padding: 0;
+        @media only screen and (max-width: 500px) {
+          width: 140px;
+        }
         a {
           display: block;
           text-decoration: none;

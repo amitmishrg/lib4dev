@@ -4,8 +4,8 @@ body {
 .main-container {
   display: flex;
   main {
-    margin-left: 350px;
-    width: calc(100% - 350px);
+    margin-left: 300px;
+    width: calc(100% - 300px);
     @media only screen and (max-width: 900px) {
       width: calc(100%);
       margin-left: 0;
