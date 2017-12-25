@@ -11,6 +11,13 @@ body {
       margin-left: 0;
     }
   }
+  #main {
+    @media only screen and (max-width: 900px) {
+      &.push {
+        transform: translateX(250px);
+      }
+    }
+  }
   .row {
     margin: 0;
   }

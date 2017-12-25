@@ -8,6 +8,9 @@
       width: 250px;
       transform: translateX(-250px);
       z-index: 11;
+      &.show {
+        transform: translateX(0);
+      }
   }
   .wrapper {
     .logo-wrapper {

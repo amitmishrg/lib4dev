@@ -6,5 +6,10 @@
     $options.toggle();
   });
 
+  $("#menu").on('click', function() {
+    $('.sidebar').toggleClass('show');
+    $('#main').toggleClass('push');
+  });
+
 
 })();
