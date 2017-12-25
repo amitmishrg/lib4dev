@@ -1,19 +1,37 @@
+.card-section {
+  display: block;
+  padding: 0 10px 0 10px;
+}
 .card-container {
   background: #FFFFFF;
-  box-shadow: 1px 6px 20px rgba(164, 164, 164, .3);
+  box-shadow: 1px 6px 10px rgba(164, 164, 164, .3);
   padding: 15px;
   border-radius: 6px;
   position: relative;
   overflow: hidden;
-  margin-bottom: 30px;
+  width: calc(20% - 30px);
+  padding: 15px;
+  float: left;
+  margin: 15px;
+  @media only screen and (max-width: 1900px) {
+    width: calc(25% - 30px);
+  }
+  @media only screen and (max-width: 1600px) {
+    width: calc(33.33% - 30px);
+  }
+  @media only screen and (max-width: 1200px) {
+    width: calc(50% - 30px);
+  }
+  @media only screen and (max-width: 575px) {
+    width: calc(100% - 30px);
+  }
   header {
-    display: flex;
     .logo {
       width: 50px;
       height: 50px;
-      background: #FAFAFC;
-      text-align: center;
       border-radius: 50%;
+      float: left;
+      margin-right: 10px;
       img {
         vertical-align: middle;
         max-width: 100%;
@@ -32,26 +50,33 @@
         line-height: 50px;
         color: #323552;
         text-transform: capitalize;
+        white-space: nowrap;
+        width: calc(80% - 50px);
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
     }
     .star-bg {
-      width: 320px;
-      height: 320px;
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
-      background: rgba(247, 75, 95, .03);
+      background: rgba(247, 75, 95, 0.07);
       position: absolute;
-      right: -190px;
-      top: -230px;
+      right: -60px;
+      top: -65px;
     }
     .star {
       position: absolute;
       right: 30px;
+      top: 15px;
       span {
         font-size: 14px;
         color: #D0D0D0;
       }
-      i {
-
+      img {
+        position: absolute;
+        top: -8px;
+        right: -23px;
       }
     }
   }
@@ -61,6 +86,7 @@
       color: #858797;
       font-size: 14px;
       height: 60px;
+      overflow: hidden;
     }
     .tags {
       ul {
@@ -93,7 +119,11 @@
         margin-right: 10px;
         span {
           font-size: 12px;
-          color: #7A7D97;
+          color: #7a7d97;
+          font-weight: 500;
+        }
+        img {
+          width: 12px;
         }
       }
     }
@@ -107,6 +137,9 @@
       font-size: 12px;
       line-height: 14px;
       margin-top: -9px;
+      &:hover {
+        background: #5b8aef;
+      }
     }
   }
 }

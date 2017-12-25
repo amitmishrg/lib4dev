@@ -4,6 +4,9 @@
   position: fixed;
   overflow-y: auto;
   height: 100%;
+  @media only screen and (max-width: 900px) {
+      transform: translateX(-360px);
+  }
   .wrapper {
     .logo-wrapper {
       background: rgba(68, 70, 95, 0.93);

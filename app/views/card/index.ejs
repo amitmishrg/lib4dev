@@ -1,43 +1,31 @@
 <% items.forEach(function(item) { %>
-  <div class="col-sm-4">
-    <div class="card-container">
-      <header>
-        <div class="logo">
-          <!-- <h3>R</h3> -->
-          <img src="<%= item.owner.avatar_url %>" />
-        </div>
-        <div class="title">
-          <h4 title="<%= item.full_name %>"><%= item.name %></h4>
-        </div>
-        <div class="star-bg"></div>
-        <div class="star">
-          <span><%= item.watchers %></span>
-          <i class="start"></i>
-        </div>
-      </header>
-      <div class="body">
-        <p><%= item.description %></p>
-        <!-- <div class="tags">
-          <ul>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>Frontend</li>
-          </ul>
-        </div> -->
+  <div class="card-container">
+    <header>
+      <div class="logo">
+        <img src="<%= item.owner.avatar_url %>" />
       </div>
-      <footer>
-        <ul>
-          <li>
-            <i></i>
-            <span><%= item.watchers %></span>
-          </li>
-          <li>
-            <i></i>
-            <span><%= item.forks %></span>
-          </li>
-        </ul>
-        <a href="/info/<%= item.owner.login %>/<%= item.name %>">View</a>
-      </footer>
+      <div class="title">
+        <a href="/info/<%= item.owner.login %>/<%= item.name %>">
+          <h4 title="<%= item.full_name %>"><%= item.name %></h4>
+        </a>
+      </div>
+      <div class="star-bg"></div>
+      <div class="star">
+        <span><%= item.watchers %></span>
+        <img src="/svg/star.svg" />
+      </div>
+    </header>
+    <div class="body">
+      <p><%= item.description %></p>
     </div>
+    <footer>
+      <ul>
+        <li>
+          <img src="/svg/forks.svg" />
+          <span><%= item.forks %></span>
+        </li>
+      </ul>
+      <a href="/info/<%= item.owner.login %>/<%= item.name %>">View</a>
+    </footer>
   </div>
 <% }); %>

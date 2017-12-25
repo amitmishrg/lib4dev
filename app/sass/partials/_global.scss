@@ -5,7 +5,11 @@ body {
   display: flex;
   main {
     margin-left: 350px;
-    width: 100%;
+    width: calc(100% - 350px);
+    @media only screen and (max-width: 900px) {
+      width: calc(100%);
+      margin-left: 0;
+    }
   }
   .row {
     margin: 0;

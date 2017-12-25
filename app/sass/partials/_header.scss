@@ -2,6 +2,9 @@
   position: fixed;
   width: calc(100% - 350px);
   z-index: 1;
+  @media only screen and (max-width: 900px) {
+    width: calc(100%);
+  }
 }
 .top-header {
   background: #fff;
@@ -13,10 +16,14 @@
     display: flex;
     position: relative;
     top: 5px;
-    embed {
+    @media only screen and (max-width: 900px) {
+      display: none;
+    }
+    img {
       position: relative;
-      top: -8px;
+      top: -6px;
       left: -5px;
+      width: 20px
     }
     h2 {
       font-size: 24px;
@@ -37,10 +44,11 @@
         line-height: 20px;
         width: 250px;
       }
-      embed {
+      img {
         position: absolute;
-        top: 10px;
-        right: 10px;
+        top: 13px;
+        right: 12px;
+        width: 15px;
       }
   }
 }
