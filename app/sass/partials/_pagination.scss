@@ -17,8 +17,8 @@
   }
   .pagination>.disabled>a, .pagination>.disabled>a:focus, .pagination>.disabled>a:hover, .pagination>.disabled>span, .pagination>.disabled>span:focus, .pagination>.disabled>span:hover {
     color: #777;
-    background-color: #fff;
-    border-color: #ddd;
+    background: #efefef;
+    border-color: #efefef;
     cursor: not-allowed;
     border: none;
   }
@@ -28,7 +28,7 @@
     padding: 6px 12px;
     line-height: 1.42857;
     text-decoration: none;
-    color: #323552;
+    color: #858797;
     background-color: transparent;
     border: 1px solid #739ffc;
     margin-left: -1px;
@@ -36,5 +36,8 @@
     background: #ededef;
     border-radius: 50%;
     margin: 0 3px;
+    &:hover {
+      background: #e2e7f3;
+    }
   }
 }
