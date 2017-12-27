@@ -26,7 +26,6 @@ let init = async (req, res) => {
         current: req.query.p || 1,
       }
       res.render('home', pageData);
-      console.log(pageData);
     }
 
   } catch (error) {

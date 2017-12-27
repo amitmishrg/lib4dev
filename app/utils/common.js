@@ -42,10 +42,17 @@ const numberWithCommas = (x) => {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
+let getFilterRepoById = (id, data) => {
+  if (data) {
+    return data.filter((item) => item.id == id );
+  }
+}
+
   module.exports = {
     constructHomeApiEndPoint,
     getTopic,
     numberKFormatter,
     numberWithCommas,
-    pageNumber
+    pageNumber,
+    getFilterRepoById
   }

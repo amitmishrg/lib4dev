@@ -5,7 +5,7 @@
         <img src="<%= item.owner.avatar_url %>" />
       </div>
       <div class="title">
-        <a class="show-loader" href="/info/<%= item.owner.login %>/<%= item.name %>">
+        <a class="show-loader" href="/info/<%= item.owner.login %>/<%= item.name %>/<%= item.id %>">
           <h4 title="<%= item.full_name %>"><%= item.name %></h4>
         </a>
       </div>
@@ -30,7 +30,7 @@
           </a>
         </li>
       </ul>
-      <a class="view show-loader" href="/info/<%= item.owner.login %>/<%= item.name %>">View</a>
+      <a class="view show-loader" href="/info/<%= item.owner.login %>/<%= item.name %>/<%= item.id %>">View</a>
     </footer>
   </div>
 <% }); %>

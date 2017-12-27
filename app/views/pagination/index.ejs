@@ -4,7 +4,7 @@
         <% if (current == 1) { %>
             <li class="disabled"><a>First</a></li>
         <% } else { %>
-            <li><a class="show-loader" href="/topics/<%= topic %>?p=1&s=<%= sort%>">First</a></li>
+            <li><a class="show-loader" href="/topics/<%= topic %>?p=1&s=<%= sort%>"><</a></li>
         <% } %>
         <% var i = (Number(current) > 5 ? Number(current) - 4 : 1) %>
         <% if (i !== 1) { %>
@@ -21,9 +21,9 @@
             <% } %>
         <% } %>
         <% if (current == pages) { %>
-            <li class="disabled"><a>Last</a></li>
+            <li class="disabled"><a>></a></li>
         <% } else { %>
-            <li><a class="show-loader" href="/topics/<%= topic %>?p=<%= pages %>&s=<%= sort%>">Last</a></li>
+            <li><a class="show-loader" href="/topics/<%= topic %>?p=<%= pages %>&s=<%= sort%>">></a></li>
         <% } %>
     </ul>
   <% } %>

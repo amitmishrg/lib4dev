@@ -10,7 +10,7 @@ module.exports = (app, config) => {
 
   app.get('/query', homeCtrl.init);
 
-  app.get('/info/:owner/:topic', singleCtrl.init);
+  app.get('/info/:owner/:topic/:id', singleCtrl.init);
 
   app.get('/about', (req, res) => {
     res.render('about');

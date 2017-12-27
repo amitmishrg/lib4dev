@@ -1,10 +1,45 @@
 #markdown {
+  position: relative;
   padding: 30px;
   background: #fff;
   margin: 30px;
   margin-top: 130px;
   border-radius: 6px;
-
+  .repo-info-wrapper {
+    .star {
+      position: absolute;
+      right: 30px;
+      top: 20px;
+      span {
+        font-size: 16px;
+        color: #d0d0d0;
+      }
+    }
+    img {
+      position: relative;
+      top: -14px;
+    }
+    .view-on {
+      position: absolute;
+      top: -10px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      .view {
+        background: #739ffc;
+        color: #fff;
+        padding: 7px 20px;
+        border-radius: 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 12px;
+        line-height: 14px;
+        &:hover {
+          background: #5b8aef;
+        }
+      }
+    }
+  }
   .markdown-body {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;

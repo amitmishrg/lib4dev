@@ -1,5 +1,14 @@
 
 <div id="markdown">
+  <div class="repo-info-wrapper">
+    <div class="star">
+      <span><%= numberKFormatter(reposInfo.stargazers_count) || 0 %></span>
+      <img src="/svg/star.svg" />
+    </div>
+    <div class="view-on">
+      <a class="view" target="_blank" href="<%= reposInfo.html_url %>">View on github</a>
+    </div>
+  </div>
   <div class="markdown-body">
     <%- content %>
   </div>

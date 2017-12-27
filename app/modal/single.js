@@ -10,6 +10,16 @@ let init = async url => {
   }
 }
 
+let fetchReposList = async url => {
+  try {
+    let response = await axios.get(url);
+    return response && response.data.items;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 module.exports = {
-  init
+  init,
+  fetchReposList
 }
