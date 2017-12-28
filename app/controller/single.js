@@ -17,7 +17,7 @@ let init = async (req, res) => {
     let response = await Single.init(url);
     let getReposList = Home.getReposList();
     let reposInfo = '';
-    if (getReposList) {
+    if (getReposList && getReposList.length) {
       reposInfo = common.getFilterRepoById(repoId, getReposList);
       console.log(reposInfo, 'cache');
     } else {
