@@ -17,14 +17,11 @@ let init = async (req, res) => {
     let response = await Single.init(url);
     let getReposList = Home.getReposList();
     let reposInfo = '';
-    if (getReposList && getReposList.length) {
-      reposInfo = common.getFilterRepoById(repoId, getReposList);
-      console.log(reposInfo, 'cache');
-    } else {
+    reposInfo = common.getFilterRepoById(repoId, getReposList);
+    if (!(reposInfo && reposInfo.length) ) {
       let url = common.constructHomeApiEndPoint(req);
       let response = await Single.fetchReposList(url);
       reposInfo = common.getFilterRepoById(repoId, response);
-      console.log(reposInfo, 'call');
     }
     content = converter.makeHtml(response);
 

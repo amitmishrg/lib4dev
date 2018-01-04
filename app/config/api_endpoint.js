@@ -3,7 +3,7 @@ module.exports = {
   search: {
     endPoint: "https://api.github.com/search/repositories",
     order: "desc",
-    topic: "javascript",
+    topic: "swift",
     sort: "stars"
   },
   repoInfo: {

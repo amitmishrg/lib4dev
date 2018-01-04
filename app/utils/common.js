@@ -44,8 +44,10 @@ const numberWithCommas = (x) => {
 
 let getFilterRepoById = (id, data) => {
   if (data) {
-    return data.filter((item) => item.id == id );
+    let result = data.filter((item) => item.id == id );
+    return result ? result : [];
   }
+  return [];
 }
 
   module.exports = {
