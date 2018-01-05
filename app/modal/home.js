@@ -8,7 +8,7 @@ let init = async url => {
     setReposList(responseDate.items);
     return responseDate;
   } catch (error) {
-    console.log(error);
+    throw error;
   }
 }
 

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "export NODE_ENV=development && node app.js"
+    "start": "export NODE_ENV=development && node app.js",
+    "start-dev": "export NODE_ENV=development && nodemon --inspect app.js"
   },
   "author": "Amit Mishra",
   "license": "ISC",

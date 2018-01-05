@@ -6,7 +6,7 @@ const showdown  = require('showdown');
 const common = require('../utils/common');
 const converter = new showdown.Converter();
 
-let init = async (req, res) => {
+let init = async (req, res, next) => {
   let owner = req.params.owner;
   let topic = req.params.topic;
   let repoId = req.params.id;
@@ -15,27 +15,37 @@ let init = async (req, res) => {
   try {
     let url = `${api.repoInfo.endPoint}/${owner}/${topic}/readme`;
     let response = await Single.init(url);
-    let getReposList = Home.getReposList();
-    let reposInfo = '';
-    reposInfo = common.getFilterRepoById(repoId, getReposList);
-    if (!(reposInfo && reposInfo.length) ) {
-      let url = common.constructHomeApiEndPoint(req);
-      let response = await Single.fetchReposList(url);
-      reposInfo = common.getFilterRepoById(repoId, response);
-    }
-    content = converter.makeHtml(response);
+    if (response) {
+      let getReposList = Home.getReposList();
+      let reposInfo = '';
+      reposInfo = common.getFilterRepoById(repoId, getReposList);
+      if (!(reposInfo && reposInfo.length) ) {
+        let url = common.constructHomeApiEndPoint(req);
+        let response = await Single.fetchReposList(url);
+        reposInfo = common.getFilterRepoById(repoId, response);
+      }
+      content = converter.makeHtml(response);
 
-    let pageData = {
-      topic: topic || '',
-      searchTerm: req.query.search || '',
-      reposInfo: reposInfo[0],
-      content: content,
-      languages: constant.language,
-      tags: constant.tags
+      let pageData = {
+        topic: topic || '',
+        searchTerm: req.query.search || '',
+        reposInfo: reposInfo[0],
+        content: content,
+        languages: constant.language,
+        tags: constant.tags
+      }
+      res.render('single', pageData);
+    } else {
+      let pageData = {
+        searchTerm: req.query.search || '',
+        topic: topic,
+        languages: constant.language,
+        tags: constant.tags
+      }
+      res.render('not-found/index', pageData);
     }
-    res.render('single', pageData);
   } catch (error) {
-    console.log(error);
+    next(error)
   }
 }
 

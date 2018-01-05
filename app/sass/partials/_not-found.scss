@@ -1,0 +1,35 @@
+.not-found-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: -60px auto 0 300px;
+  @media only screen and (max-width: 900px) {
+    margin-left: 0;
+  }
+  &.page-404 {
+    width: 500px;
+    background: #fff;
+    padding: 80px;
+    box-shadow: 1px 0px 50px #e6e6e6;
+    margin: -160px auto 0 auto;
+    h3 {
+      margin: 15px 0 5px auto;
+      color: #739ffc;
+      font-size: 22px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+  img {
+    width: 80px;
+    height: 80px;
+  }
+  p {
+    font-size: 18px;
+    color: #e6e6e6;
+    margin-top: 10px;
+  }
+}

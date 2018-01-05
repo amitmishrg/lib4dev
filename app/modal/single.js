@@ -6,7 +6,7 @@ let init = async url => {
     let markdown = await axios.get(response.data.download_url);
     return markdown.data;
   } catch (error) {
-    console.log(error);
+    throw error;
   }
 }
 
@@ -15,7 +15,7 @@ let fetchReposList = async url => {
     let response = await axios.get(url);
     return response && response.data.items;
   } catch (error) {
-    console.log(error);
+    throw error;
   }
 }
 

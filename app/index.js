@@ -1,6 +1,7 @@
 const express = require('express');
 const session = require('express-session');
 const RedisStore = require('connect-redis')(session);
+const { errorHandler } = require('./utils/error-handler');
 
 module.exports = (app, config) => {
 
@@ -23,7 +24,6 @@ module.exports = (app, config) => {
     resave: false,
     saveUninitialized: true
   }));
-
   require('./routes')(app, config);
-
+  app.use(errorHandler)
 }
