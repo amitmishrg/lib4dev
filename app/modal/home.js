@@ -1,9 +1,11 @@
 const axios = require("axios");
+const common = require('../utils/common');
 
 let list;
 let init = async url => {
   try {
-    let response = await axios.get(url);
+    let options = common.getOptions(url);
+    let response = await axios(options);
     let responseDate = response.data;
     setReposList(responseDate.items);
     return responseDate;

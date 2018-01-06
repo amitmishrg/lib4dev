@@ -1,8 +1,10 @@
 const axios = require("axios");
+const common = require('../utils/common');
 
 let init = async url => {
   try {
-    let response = await axios.get(url);
+    let options = common.getOptions(url);
+    let response = await axios.get(options);
     let markdown = await axios.get(response.data.download_url);
     return markdown.data;
   } catch (error) {
@@ -12,7 +14,8 @@ let init = async url => {
 
 let fetchReposList = async url => {
   try {
-    let response = await axios.get(url);
+    let options = common.getOptions(url);
+    let response = await axios.get(options);
     return response && response.data.items;
   } catch (error) {
     throw error;

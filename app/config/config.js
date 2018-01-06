@@ -12,6 +12,11 @@ let config = {
       ttl: (30 * 24 * 60 * 60),
       secret: '123456'
     }
+  },
+  production: {
+    app: {
+      port: process.env.PORT,
+    }
   }
 }
 

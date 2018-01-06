@@ -55,11 +55,22 @@ let getFilterRepoById = (id, data) => {
 
 }
 
+let getOptions = (url) => {
+  return {
+    url: url,
+    method: 'get',
+    headers: {
+      'Authorization': constant.token
+    }
+  }
+}
+
   module.exports = {
     constructHomeApiEndPoint,
     getTopic,
     numberKFormatter,
     numberWithCommas,
     pageNumber,
-    getFilterRepoById
+    getFilterRepoById,
+    getOptions
   }

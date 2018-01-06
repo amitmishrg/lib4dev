@@ -108,5 +108,6 @@ module.exports = {
     webworker: "Web workers",
     webgl: "WebGL",
     websocket: "Websocket"
-  }
+  },
+  token: 'token 152c68de14637490133004fcbfe703c9de755fd4'
 }
