@@ -10,7 +10,7 @@ let errorHandler = (err, req, res, next) => {
     } else {
       errMsg = errMessages.DEFAULT_ERR_MESSAGE;
     }
-    res.status(errorStatus).json({ message: errMsg });
+    res.status(errorStatus).json({ message: err });
   }
 
   module.exports = {
