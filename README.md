@@ -3,15 +3,16 @@ Find best library for any programming language using the **lib4dev**. Its provid
 
 > Make you development easy and fast using awesome libraries.
 
-### Screenshot
+## Screenshot
 [![](http://www.lib4dev.com/img/banner.png)](http://www.lib4dev.com/)
+[![](http://www.lib4dev.com/img/single-page.png)](http://www.lib4dev.com/)
 
-### Features
+## Features
   - Sort by best match, best stars, best forks and recently updated
   - Search any library by name
   - Search by topic name
 
-### Popular language
+## Popular language
 * [Swift](http://www.lib4dev.com/topics/swift)
 * [Objective-c](http://www.lib4dev.com/topics/objective-c)
 * [Shell](http://www.lib4dev.com/topics/shell)
@@ -27,9 +28,15 @@ Find best library for any programming language using the **lib4dev**. Its provid
 * [CSS](http://www.lib4dev.com/topics/css)
 * [GO](http://www.lib4dev.com/topics/go)
 
-### Popular topics
+## Popular topics
 * [React](http://www.lib4dev.com/topics/react)
 * [Docker](http://www.lib4dev.com/topics/docker)
 * [Machine Learning](http://www.lib4dev.com/topics/machine-learning)
 * [Android](http://www.lib4dev.com/topics/android)
 * more...
+
+## Report Bugs
+If you want to report a bug or request a feature? Please open an [issue](https://github.com/amituidev/lib4dev/issues/new).
+
+## Need your Support
+lib4dev is help you to find best library. If you find it helpfull then please start ⭐️ the repository and sharing it to social network.

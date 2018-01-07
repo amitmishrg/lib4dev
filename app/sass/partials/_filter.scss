@@ -13,10 +13,17 @@
     @media only screen and (max-width: 500px) {
       display: none;
     }
-    span {
+    p {
       font-size: 16px;
       font-weight: 500;
       color: #739FFC;
+      text-transform: capitalize;
+      span {
+        font-size: 12px;
+        font-weight: 500;
+        color: #85879d;
+        text-transform: lowercase;
+      }
     }
   }
   .filter-wrapper {
@@ -44,12 +51,20 @@
         border: 1px solid #f2f2f2;
         padding: 7px 10px;
         cursor: pointer;
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+          -moz-user-select: none; /* Firefox */
+           -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
       }
       .icon {
         position: absolute;
         top: 6px;
         right: 10px;
-
+        &.toggle {
+          transform: rotate(180deg);
+          top: 8px;
+        }
       }
     }
 
