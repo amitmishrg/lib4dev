@@ -135,5 +135,5 @@ module.exports = {
     webgl: "WebGL",
     websocket: "Websocket"
   },
-  token: 'token 483633db2cad9f8db77dc6f3b7fda01526e59397'
+  token: 'token 16eddd63fe6e79b0799208924a638d4891ed036d'
 }
