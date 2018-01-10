@@ -1,5 +1,5 @@
 # lib4dev (Libraries for developers)
-Find best library for any programming language using the **lib4dev**. Its provide simple interface where you can sort libraries by **Best Match**, **Best Stars**, **Best Forks** and **Recently Updated** also you can search any library using search fearure and by topic name.
+Find the best library for any programming language using the **lib4dev**. Its provide simple interface where you can sort libraries by **Best Match**, **Best Stars**, **Best Forks** and **Recently Updated** also you can search any library using search feature and by topic name.
 
 > Make you development easy and fast using awesome libraries.
 
