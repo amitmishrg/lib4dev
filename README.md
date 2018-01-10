@@ -1,18 +1,22 @@
 # lib4dev (Libraries for developers)
-Find the best library for any programming language using the **lib4dev**. Its provide simple interface where you can sort libraries by **Best Match**, **Best Stars**, **Best Forks** and **Recently Updated** also you can search any library using search feature and by topic name.
+
+Find the best library for any programming language using the **lib4dev**. It provides a simple interface where you can sort libraries by **Best Match**, **Most Stars**, **Most Forks** and **Recently Updated**. You can also search any library using the search feature and by topic name.
 
 > Make you development easy and fast using awesome libraries.
 
 ## Screenshot
+
 [![](http://www.lib4dev.com/img/banner.png)](http://www.lib4dev.com/)
 [![](http://www.lib4dev.com/img/single-page.png)](http://www.lib4dev.com/)
 
 ## Features
-  - Sort by best match, best stars, best forks and recently updated
-  - Search any library by name
-  - Search by topic name
 
-## Popular language
+* Sort by best match, most stars, most forks, and recently updated
+* Search any library by name
+* Search by topic name
+
+## Popular languages
+
 * [Swift](http://www.lib4dev.com/topics/swift)
 * [Objective-c](http://www.lib4dev.com/topics/objective-c)
 * [Shell](http://www.lib4dev.com/topics/shell)
@@ -29,6 +33,7 @@ Find the best library for any programming language using the **lib4dev**. Its pr
 * [GO](http://www.lib4dev.com/topics/go)
 
 ## Popular topics
+
 * [React](http://www.lib4dev.com/topics/react)
 * [Docker](http://www.lib4dev.com/topics/docker)
 * [Machine Learning](http://www.lib4dev.com/topics/machine-learning)
@@ -36,7 +41,9 @@ Find the best library for any programming language using the **lib4dev**. Its pr
 * more...
 
 ## Report Bugs
-If you want to report a bug or request a feature? Please open an [issue](https://github.com/amituidev/lib4dev/issues/new).
+
+Want to report a bug or request a feature? Please open an [issue](https://github.com/amituidev/lib4dev/issues/new).
 
 ## Need your Support
-lib4dev is help you to find best library. If you find it helpfull then please start ⭐️ the repository and sharing it to social network.
+
+lib4dev helps you to find the best library. If you find it helpful then please star ⭐️ the repository and share it to a social network.

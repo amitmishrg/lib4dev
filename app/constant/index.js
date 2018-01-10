@@ -1,4 +1,3 @@
-
 module.exports = {
   language: [
     "swift",
@@ -17,10 +16,10 @@ module.exports = {
     "go"
   ],
   options: {
-    '' : 'Best Match',
-    stars: 'Best Stars',
-    forks: 'Best Forks',
-    updated: 'Recently Updated'
+    "": "Best Match",
+    stars: "Most Stars",
+    forks: "Most Forks",
+    updated: "Recently Updated"
   },
   pagination: {
     perPage: 30
@@ -68,7 +67,7 @@ module.exports = {
     es6: "Es6",
     eslint: "Eslint",
     firebase: "Firebase",
-    flow : "Promises",
+    flow: "Promises",
     fullstack: "Full-stack framework",
     fp: "Functional programming",
     game: "Game engine",
@@ -135,5 +134,5 @@ module.exports = {
     webgl: "WebGL",
     websocket: "Websocket"
   },
-  token: 'token 16eddd63fe6e79b0799208924a638d4891ed036d'
-}
+  token: "token 16eddd63fe6e79b0799208924a638d4891ed036d"
+};
