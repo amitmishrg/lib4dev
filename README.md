@@ -47,3 +47,11 @@ Want to report a bug or request a feature? Please open an [issue](https://github
 ## Need your Support
 
 lib4dev helps you to find the best library. If you find it helpful then please star ⭐️ the repository and share it to a social network.
+
+## Changelog
+
+See the [Changelog](https://github.com/amituidev/lib4dev/wiki/Changelog)
+
+## License
+
+[MIT](LICENSE) © [Amit Mishra](https://amituidev.github.io/portfolio/)
