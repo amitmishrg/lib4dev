@@ -1,4 +1,3 @@
-
 (function() {
 
   $("#menu").on('click', function() {
@@ -31,4 +30,47 @@
     $icon.toggleClass('toggle');
   });
 
+  $("#social-share-wrapper").on('click', '.share-btn', function(event) {
+    let $target = $(event.currentTarget).closest('#social-share-wrapper');
+    $target.find('#share').toggleClass('open');
+  });
 })();
+
+let getUrl = function(evt) {
+  let type = evt.dataset.type,
+    location = window.location.href,
+    url = '';
+  switch (type) {
+    case "twitter":
+        url = `http://twitter.com/share?url=${location}`;
+      break;
+    case "facebook":
+        url = `https://www.facebook.com/sharer/sharer.php?u=${location}`
+      break;
+    case "google":
+        url = `https://plus.google.com/share?url=${location}`
+      break;
+  }
+  return url;
+}
+let popup = function(evt) {
+  let url = getUrl(evt);
+  let width = 580;
+  let height = 296;
+  let left = (screen.width - width) / 2;
+  let top = (screen.height - height) / 2;
+  let params = 'width=' + width + ', height=' + height;
+  params += ', top=' + top + ', left=' + left;
+  params += ', directories=no';
+  params += ', location=no';
+  params += ', menubar=no';
+  params += ', resizable=no';
+  params += ', scrollbars=no';
+  params += ', status=no';
+  params += ', toolbar=no';
+  newwin = window.open(url, 'windowname5', params);
+  if (window.focus) {
+      newwin.focus();
+  }
+  return false;
+}
