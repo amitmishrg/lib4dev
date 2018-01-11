@@ -10,10 +10,8 @@ let errorHandler = (err, req, res, next) => {
     } else {
       errMsg = errMessages.DEFAULT_ERR_MESSAGE;
     }
-    console.log(err);
     res.status(errorStatus).json({
        message: errMsg,
-       err: err.toString()
      });
   }
 
