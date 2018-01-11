@@ -41,6 +41,7 @@ module.exports = {
     babel: "Babel",
     book: "Book",
     build: "Building tool",
+    cpp: "C++",
     "chrome-extension": "Chrome extension",
     compatibility: "Browser compatibility",
     clojure: "Clojure",
