@@ -13,17 +13,17 @@ let init = async (req, res, next) => {
   let locals = req.app.locals;
   locals.numberKFormatter = common.numberKFormatter;
   try {
+    let reposInfo = '';
     let url = `${api.repoInfo.endPoint}/${owner}/${topic}/readme`;
+    let getReposList = Home.getReposList();
+    reposInfo = common.getFilterRepoById(repoId, getReposList);
+    if (!(reposInfo && reposInfo.length)) {
+      let url = common.constructHomeApiEndPoint(req);
+      let response = await Single.fetchReposList(url);
+      reposInfo = common.getFilterRepoById(repoId, response);
+    }
     let response = await Single.init(url);
-    if (response) {
-      let getReposList = Home.getReposList();
-      let reposInfo = '';
-      reposInfo = common.getFilterRepoById(repoId, getReposList);
-      if (!(reposInfo && reposInfo.length)) {
-        let url = common.constructHomeApiEndPoint(req);
-        let response = await Single.fetchReposList(url);
-        reposInfo = common.getFilterRepoById(repoId, response);
-      }
+    if (typeof response === 'string') {
       content = converter.makeHtml(response);
 
       let pageData = {
@@ -31,6 +31,16 @@ let init = async (req, res, next) => {
         searchTerm: req.query.search || '',
         reposInfo: reposInfo[0],
         content: content,
+        languages: constant.language,
+        tags: constant.tags
+      };
+      res.render('single', pageData);
+    } else if(response.status === 404) {
+      let pageData = {
+        searchTerm: req.query.search || '',
+        reposInfo: reposInfo[0],
+        topic: topic,
+        content: response.data.message,
         languages: constant.language,
         tags: constant.tags
       };
