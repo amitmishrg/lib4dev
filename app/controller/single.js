@@ -1,8 +1,8 @@
-const Single = require('../modal/single');
-const Home = require("../modal/home");
+const Single = require('../model/single');
+const Home = require('../model/home');
 const api = require('../config/api_endpoint');
 const constant = require('../constant/index');
-const showdown  = require('showdown');
+const showdown = require('showdown');
 const common = require('../utils/common');
 const converter = new showdown.Converter();
 
@@ -19,7 +19,7 @@ let init = async (req, res, next) => {
       let getReposList = Home.getReposList();
       let reposInfo = '';
       reposInfo = common.getFilterRepoById(repoId, getReposList);
-      if (!(reposInfo && reposInfo.length) ) {
+      if (!(reposInfo && reposInfo.length)) {
         let url = common.constructHomeApiEndPoint(req);
         let response = await Single.fetchReposList(url);
         reposInfo = common.getFilterRepoById(repoId, response);
@@ -33,7 +33,7 @@ let init = async (req, res, next) => {
         content: content,
         languages: constant.language,
         tags: constant.tags
-      }
+      };
       res.render('single', pageData);
     } else {
       let pageData = {
@@ -41,14 +41,14 @@ let init = async (req, res, next) => {
         topic: topic,
         languages: constant.language,
         tags: constant.tags
-      }
+      };
       res.render('not-found/index', pageData);
     }
   } catch (error) {
-    next(error)
+    next(error);
   }
-}
+};
 
 module.exports = {
   init
-}
+};
