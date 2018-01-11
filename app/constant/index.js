@@ -1,20 +1,21 @@
 module.exports = {
-  language: [
-    "swift",
-    "objective-c",
-    "shell",
-    "python",
-    "javascript",
-    "java",
-    "html",
-    "c",
-    "ruby",
-    "php",
-    "sql",
-    "node",
-    "css",
-    "go"
-  ],
+  language: {
+    c: "C",
+    cpp: "C++",
+    css: "Css",
+    go: "Go",
+    html: "html",
+    java: "java",
+    javascript: "javascript",
+    node: "node",
+    "objective-c": "objective-c",
+    python: "python",
+    php: "php",
+    ruby: "ruby",
+    shell: "shell",
+    swift: "swift",
+    sql: "sql"
+  },
   options: {
     "": "Best Match",
     stars: "Most Stars",
