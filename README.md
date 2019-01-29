@@ -6,8 +6,8 @@ Find the best library for any programming language using the **lib4dev**. It pro
 
 ## Screenshot
 
-[![](http://www.lib4dev.com/img/banner.png)](http://www.lib4dev.com/)
-[![](http://www.lib4dev.com/img/single-page.png)](http://www.lib4dev.com/)
+[![](http://www.lib4dev.in/img/banner.png)](http://www.lib4dev.in/)
+[![](http://www.lib4dev.in/img/single-page.png)](http://www.lib4dev.in/)
 
 ## Features
 
