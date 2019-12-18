@@ -14,7 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.17.1",
-    "bootstrap-sass": "^3.3.7",
+    "bootstrap-sass": "^3.4.1",
     "connect-redis": "^3.3.2",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
