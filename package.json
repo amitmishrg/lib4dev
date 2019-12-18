@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "10.15.3"
+  },
   "scripts": {
     "start": "export NODE_ENV=development && node app.js",
     "start-dev": "export NODE_ENV=development && nodemon --inspect app.js"
