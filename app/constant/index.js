@@ -2,6 +2,7 @@ module.exports = {
   language: {
     c: "C",
     cpp: "C++",
+    crystal: "Crystal",
     css: "Css",
     go: "Go",
     html: "html",
