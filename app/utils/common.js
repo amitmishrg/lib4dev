@@ -1,12 +1,15 @@
 const api = require('../config/api_endpoint');
 const constant = require('../constant/index');
 
-
 let constructHomeApiEndPoint = req => {
   let sort = req.query.s || '';
   let page = req.query.p || 1;
   let topic = getTopic(req);
   return `${api.search.endPoint}?sort=${sort}&order=${api.search.order}&q=${topic}&page=${page}`;
+}
+
+let promotedEndPoint = req => {
+  return `${api.repoInfo.endPoint}/amitmishrg/code-resume`;
 }
 
 let getTopic = req => {
@@ -72,5 +75,6 @@ let getOptions = (url) => {
     numberWithCommas,
     pageNumber,
     getFilterRepoById,
-    getOptions
+    getOptions,
+    promotedEndPoint
   }

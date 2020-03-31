@@ -9,7 +9,7 @@
     border-bottom: 1px solid #f1f1f3;
     a {
       text-transform: uppercase;
-      background: #d3485d;
+      background: $primary-color;
       width: 170px;
       padding: 10px;
       border-radius: 20px;
@@ -18,7 +18,7 @@
       border: none;
       font-weight: 500;
       &:hover {
-        background: #d23149;
+        background: $primary-hover-color;
       }
     }
   }
@@ -29,10 +29,10 @@
       margin-bottom: 0;
       line-height: 12px;
       a {
-        color: #739ffc;
+        color: $primary-color;
         text-decoration: underline;
         &:hover {
-          color: #5b8aef;
+          color: $primary-hover-color;
         }
       }
     }

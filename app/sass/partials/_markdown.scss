@@ -26,7 +26,7 @@
       right: 0;
       text-align: center;
       .view {
-        background: #739ffc;
+        background: $primary-color;
         color: #fff;
         padding: 7px 20px;
         border-radius: 20px;
@@ -35,7 +35,7 @@
         font-size: 12px;
         line-height: 14px;
         &:hover {
-          background: #5b8aef;
+          background: $primary-hover-color;
         }
       }
     }

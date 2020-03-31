@@ -16,7 +16,7 @@
     p {
       font-size: 16px;
       font-weight: 500;
-      color: #739FFC;
+      color: $primary-color;
       text-transform: capitalize;
       span {
         font-size: 12px;
@@ -30,7 +30,7 @@
     position: relative;
     display: flex;
     span {
-      background: #739ffc;
+      background: $primary-color;
       font-size: 14px;
       font-weight: 400;
       display: inline-block;
