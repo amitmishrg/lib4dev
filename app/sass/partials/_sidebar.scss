@@ -37,6 +37,29 @@
       @media only screen and (max-width: 900px) {
         padding: 10px 0;
       }
+      .fork-me {
+        background: #f1f1f1;
+        position: absolute;
+        color: #fff;
+        top: 20px;
+        left: -28px;
+        z-index: 1;
+        transform: rotate(-45deg);
+        font-size: 8px;
+        padding: 5px 25px;
+        filter: blur(.3px);
+        box-shadow: 1px 4px 12px rgba(164,164,164,.3);
+        @media only screen and (max-width: 900px) {
+          display: none;
+        }
+        a {
+          display: block;
+          color: #484848;
+          padding: 0;
+          font-weight: bold;
+          text-decoration: none;
+        }
+      }
 
     }
     .lists {
