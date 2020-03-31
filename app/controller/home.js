@@ -7,9 +7,11 @@ let init = async (req, res, next) => {
   let topic = common.getTopic(req);
   let url = common.constructHomeApiEndPoint(req);
   try {
+    let promotedRepos = await Home.promoted(common.promotedEndPoint());
     let response = await Home.init(url);
     locals.numberWithCommas = common.numberWithCommas;
     locals.numberKFormatter = common.numberKFormatter;
+    promotedRepos.isPromoted = true;
     if (response && response.items.length) {
       let pageNumber = common.pageNumber(response);
       let pageData = {
@@ -17,7 +19,7 @@ let init = async (req, res, next) => {
         sort: req.query.s || '',
         searchTerm: req.query.search || '',
         totalCount: response.total_count,
-        items: response.items,
+        items: [promotedRepos, ...response.items],
         languages: constant.language,
         tags: constant.tags,
         options: constant.options,

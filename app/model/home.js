@@ -14,6 +14,17 @@ let init = async url => {
   }
 }
 
+let promoted = async url => {
+  try {
+    let options = common.getOptions(url);
+    let response = await axios(options);
+    let responseDate = response.data;
+    return responseDate;
+  } catch (error) {
+    throw error;
+  }
+}
+
 let setReposList = function(listItem) {
   list = listItem;
 }
@@ -25,5 +36,6 @@ let getReposList = function() {
 module.exports = {
   init,
   setReposList,
-  getReposList
+  getReposList,
+  promoted
 }

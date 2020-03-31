@@ -1,36 +1,42 @@
 <% items.forEach(function(item) { %>
-  <div class="card-container">
-    <header>
-      <div class="logo">
-        <img src="<%= item.owner.avatar_url %>" />
-      </div>
-      <div class="title">
-        <a class="show-loader" href="/info/<%= item.owner.login %>/<%= item.name %>/<%= item.id %>">
-          <h4 title="<%= item.full_name %>"><%= item.name %></h4>
-        </a>
-      </div>
-      <div class="star-bg"></div>
-      <div class="star">
-        <span><%= numberKFormatter(item.stargazers_count) %></span>
-        <img src="/svg/star.svg" />
-      </div>
-    </header>
-    <div class="body">
-      <p><%= item.description %></p>
-    </div>
-    <footer>
-      <ul>
-        <li>
-            <img src="/svg/forks.svg" />
-            <span><%= numberKFormatter(item.forks) %></span>
-        </li>
-        <li>
-          <a href="<%= item.html_url %>" target="_blank">
-            <img src="/svg/github.svg" class="github-view"/>
-          </a>
-        </li>
-      </ul>
-      <a class="view show-loader" href="/info/<%= item.owner.login %>/<%= item.name %>/<%= item.id %>">View</a>
-    </footer>
+<div class="card-container">
+  <%if (item.isPromoted) { %>
+  <div class="promoted-bdr"></div>
+  <div class="promoted">
+    <span>Promoted</span>
   </div>
+  <% } %>
+  <header>
+    <div class="logo">
+      <img src="<%= item.owner.avatar_url %>" />
+    </div>
+    <div class="title">
+      <a class="show-loader" href="/info/<%= item.owner.login %>/<%= item.name %>/<%= item.id %>">
+        <h4 title="<%= item.full_name %>"><%= item.name %></h4>
+      </a>
+    </div>
+    <div class="star-bg"></div>
+    <div class="star">
+      <span><%= numberKFormatter(item.stargazers_count) %></span>
+      <img src="/svg/star.svg" />
+    </div>
+  </header>
+  <div class="body">
+    <p><%= item.description %></p>
+  </div>
+  <footer>
+    <ul>
+      <li>
+        <img src="/svg/forks.svg" />
+        <span><%= numberKFormatter(item.forks) %></span>
+      </li>
+      <li>
+        <a href="<%= item.html_url %>" target="_blank">
+          <img src="/svg/github.svg" class="github-view" />
+        </a>
+      </li>
+    </ul>
+    <a class="view show-loader" href="/info/<%= item.owner.login %>/<%= item.name %>/<%= item.id %>">View</a>
+  </footer>
+</div>
 <% }); %>
