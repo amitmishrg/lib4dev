@@ -7,7 +7,7 @@ let init = async (req, res, next) => {
   let topic = common.getTopic(req);
   let url = common.constructHomeApiEndPoint(req);
   try {
-    let promotedRepos = await Home.promoted(common.promotedEndPoint);
+    let promotedRepos = await Home.promoted(common.promotedEndPoint());
     let response = await Home.init(url);
     locals.numberWithCommas = common.numberWithCommas;
     locals.numberKFormatter = common.numberKFormatter;
