@@ -1,21 +1,25 @@
 <div class="header-wrap">
   <div class="top-header">
     <div class="heading">
-      <img src="/svg/flash.svg" />
-      <h2>Popular Libraries</h2>
+      <a href="/">
+        <img src="/svg/logo.svg" alt="logo" />
+      </a>
     </div>
+    <ul>
+      <li><a href="/" class="link">Home</a></li>
+      <li><a href="/about" class="link">About</a></li>
+      <li><a href="/contact" class="link">Contact</a></li>
+    </ul>
     <div class="loader">
-      <img src="/svg/loader.svg" alt='loader' / >
-    </div>
-    <div class="menu" id="menu">
-      <img src="/svg/menu.svg"/>
+      <img src="/svg/loader.svg" alt='loader' />
     </div>
     <div class="search-wrapper">
       <form action="/query" method="get" class="search-form">
-      	 <input type="text" class="form-control" value="<%= searchTerm %>" name="search" id="search" placeholder="Seach library...">
-         <button type="submit" class="show-loader search-submit">
-           <img src="/svg/search.svg" />
-         </button>
+        <input type="text" class="form-control" value="<%= searchTerm %>" name="search" id="search"
+          placeholder="Seach library...">
+        <button type="submit" class="show-loader search-submit">
+          <img src="/svg/search.svg" />
+        </button>
       </form>
     </div>
   </div>

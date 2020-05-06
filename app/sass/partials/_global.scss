@@ -2,10 +2,9 @@ body {
   background: #FAFAFC;
 }
 .main-container {
-  display: flex;
   main {
-    margin-left: 300px;
-    width: calc(100% - 300px);
+    width: 80%;
+    margin: 0 auto;
     @media only screen and (max-width: 900px) {
       width: calc(100%);
       margin-left: 0;
@@ -25,4 +24,30 @@ body {
 
 .overflow {
   overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+.link {
+  font-size: 15px;
+  line-height: 18px;
+  padding: 5px 10px;
+  color: $primary-color;
+  border-radius: 4px;
+  display: block;
+  text-decoration: none;
+  white-space: nowrap;
+  text-transform: capitalize;
+  @media only screen and (max-width: 900px) {
+    font-size: 14px;
+    padding: 4px 10px 4px 20px;
+  }
+  &:hover {
+    background: rgba(152, 177, 227, .16);
+  }
+  &.active {
+    background: $primary-color;
+    color: #fff;
+  }
 }

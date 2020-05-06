@@ -1,10 +1,10 @@
 <% include header/index.ejs %>
 <div class="main-container">
-  <aside class="sidebar">
+  <!-- <aside class="sidebar">
     <% include sidebar/index.ejs %>
-  </aside>
+  </aside> -->
+  <% include header/top-header.ejs %>
   <main id="main">
-    <% include header/top-header.ejs %>
     <% include filter/index.ejs %>
     <div class="row">
       <div class="card-section clearfix">
@@ -24,7 +24,7 @@
     <div class="row">
       <% include pagination/index.ejs %>
     </div>
-    <% include footer/content.ejs %>
   </main>
+  <% include footer/content.ejs %>
 </div>
 <% include footer/index.ejs %>

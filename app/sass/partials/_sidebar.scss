@@ -20,7 +20,7 @@
       top: 0;
       border-bottom: 1px solid rgba(152,177,227,.16);
       a {
-        padding: 15px;
+        padding: 10px;
         display: block;
         @media only screen and (max-width: 900px) {
           padding: 5px;
@@ -61,49 +61,6 @@
         }
       }
 
-    }
-    .lists {
-      padding: 30px 0 15px 0;
-      border-bottom: 1px solid rgba(152,177,227,.16);
-      @media only screen and (max-width: 900px) {
-        padding: 20px 0 5px 0;
-      }
-      h4 {
-        font-size: 18px;
-        color: #fff;
-        background: $primary-color;
-        padding: 10px 15px;
-        font-weight: normal;
-        @media only screen and (max-width: 900px) {
-          font-size: 14px;
-          padding: 8px 15px;
-        }
-      }
-      ul {
-        padding-left: 0;
-        margin-top: 10px;
-        li {
-          margin:5px 0;
-          a {
-            font-size: 18px;
-            padding: 8px 15px 8px 25px;
-            color: #fff;
-            display: block;
-            text-decoration: none;
-            text-transform: capitalize;
-            @media only screen and (max-width: 900px) {
-              font-size: 14px;
-              padding: 4px 10px 4px 20px;
-            }
-            &:hover {
-              background: rgba(152, 177, 227, .16);
-            }
-            &.active {
-              background: rgba(152, 177, 227, .16);
-            }
-          }
-        }
-      }
     }
   }
 }

@@ -1,7 +1,10 @@
 .header-wrap {
-  position: fixed;
-  width: calc(100% - 300px);
+  position: sticky;
+  top: 0;
   z-index: 1;
+  background: #fff;
+  height: 50px;
+  box-shadow: 0px 1px 10px rgba(164, 164, 164, 0.15);
   @media only screen and (max-width: 900px) {
     width: calc(100%);
   }
@@ -18,25 +21,27 @@
   }
 }
 .top-header {
-  background: #fff;
-  padding: 15px 20px;
-  height: 70px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 4px 0;
   display: flex;
   justify-content: space-between;
-  box-shadow: 0px 1px 10px rgba(164, 164, 164, 0.15);
-  .heading {
+  align-items: center;
+  ul {
+    list-style: none;
+    flex: 1;
     display: flex;
-    position: relative;
-    left: 10px;
-    top: 5px;
+    margin: 0;
+  }
+  .heading {
     @media only screen and (max-width: 900px) {
       display: none;
     }
+    a {
+      display: block;
+    }
     img {
-      position: relative;
-      top: -6px;
-      left: -10px;
-      width: 15px;
+      width: 40px;
     }
     h2 {
       font-size: 20px;

@@ -1,5 +1,7 @@
 .card-section {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   padding: 0 10px 0 10px;
 }
 .card-container {
@@ -11,7 +13,6 @@
   overflow: hidden;
   width: calc(20% - 30px);
   padding: 15px;
-  float: left;
   margin: 15px;
   @media only screen and (max-width: 1900px) {
     width: calc(25% - 30px);

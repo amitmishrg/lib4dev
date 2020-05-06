@@ -1,12 +1,12 @@
 <% include header/index.ejs %>
 <div class="main-container">
-  <aside class="sidebar">
+  <!-- <aside class="sidebar">
     <% include sidebar/index.ejs %>
-  </aside>
+  </aside> -->
+  <% include header/top-header.ejs %>
   <main id="main">
-    <% include header/top-header.ejs %>
     <% include description/index.ejs %>
-    <% include footer/content.ejs %>
   </main>
+  <% include footer/content.ejs %>
 </div>
 <% include footer/index.ejs %>

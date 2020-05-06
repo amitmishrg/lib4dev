@@ -1,8 +1,4 @@
 .filter-section {
-  margin-top: 95px;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 30px;
   margin-bottom: 12px;
   @media only screen and (max-width: 500px) {
     justify-content: flex-end;
@@ -102,4 +98,55 @@
       }
     }
   }
+  .filter-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  .lists {
+      border-bottom: 1px solid rgba(152,177,227,.16);
+      display: flex;
+      padding: 10px 0;
+      @media only screen and (max-width: 900px) {
+        padding: 20px 0 5px 0;
+      }
+      
+      h4 {
+        font-size: 16px;
+        color: $secondary-color;
+        margin-top: 15px;
+        font-weight: 500;
+        width: 80px;
+        @media only screen and (max-width: 900px) {
+          font-size: 14px;
+          padding: 8px 15px;
+        }
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        overflow-x: auto;
+        margin-bottom: 0;
+        padding: 10px;
+        flex-basis: calc(100% - 80px);
+        &::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+        
+        &::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1); 
+            margin: 0 35%;
+            border-radius: 10px;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background: #32355147;
+        }
+        li {
+          margin:0 5px;
+        }
+      }
+    }
 }
