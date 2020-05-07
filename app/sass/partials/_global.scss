@@ -20,7 +20,7 @@ body {
     }
     &.row {
       .sidebar {
-        margin-top: 5px;
+        margin-top: 10px;
       }
     }
   }
@@ -40,7 +40,7 @@ a {
   font-size: 15px;
   line-height: 18px;
   padding: 5px 10px;
-  color: $primary-color;
+  color: $secondary-color;
   border-radius: 4px;
   display: block;
   text-decoration: none;
