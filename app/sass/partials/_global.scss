@@ -92,5 +92,34 @@ a {
   ul {
     margin: 15px 0;
   }
+  #share {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      li {
+        margin-right: 10px;
+        a {
+            width: 35px;
+            height: 35px;
+            background: #d84a5f;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &.twitter {
+              background: #55acee;
+            }
+            &.facebook {
+              background: #3b5999;
+            }
+            &.google {
+              background: #dd4b39;
+            }
+            img {
+              width: 13px;
+            }
+        }
+      }
+    }
 }
   
