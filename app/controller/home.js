@@ -24,7 +24,8 @@ let init = async (req, res, next) => {
         tags: constant.tags,
         options: constant.options,
         pages: pageNumber,
-        current: req.query.p || 1
+        current: req.query.p || 1,
+        currentPage: 'home'
       };
       res.render('home', pageData);
     } else {
@@ -32,7 +33,8 @@ let init = async (req, res, next) => {
         searchTerm: req.query.search || '',
         topic: topic,
         languages: constant.language,
-        tags: constant.tags
+        tags: constant.tags,
+        currentPage: 'home'
       };
       res.render('not-found/index', pageData);
     }

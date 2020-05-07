@@ -1,10 +1,12 @@
 const express = require('express');
 const session = require('express-session');
+const compression = require('compression');
 const RedisStore = require('connect-redis')(session);
 const { errorHandler } = require('./utils/error-handler');
 
 module.exports = (app, config) => {
-
+  
+  app.use(compression());
   app.set('views', 'app/views');
   app.set('view engine', 'ejs');
   app.use(express.static('public'));

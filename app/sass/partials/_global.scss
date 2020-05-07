@@ -3,17 +3,24 @@ body {
 }
 .main-container {
   main {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     @media only screen and (max-width: 900px) {
-      width: calc(100%);
-      margin-left: 0;
+      width: 95%;
     }
   }
   #main {
+    
+  }
+  section {
+    display: flex;
     @media only screen and (max-width: 900px) {
-      &.push {
-        transform: translateX(250px);
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &.row {
+      .sidebar {
+        margin-top: 5px;
       }
     }
   }
@@ -41,13 +48,49 @@ a {
   text-transform: capitalize;
   @media only screen and (max-width: 900px) {
     font-size: 14px;
-    padding: 4px 10px 4px 20px;
   }
-  &:hover {
-    background: rgba(152, 177, 227, .16);
+  &:hover, &:focus {
+    background: rgba(152, 177, 227, .08);
+    text-decoration: none;
   }
   &.active {
-    background: $primary-color;
-    color: #fff;
+    background: rgba(152, 177, 227, .16);
   }
 }
+
+.page {
+  margin: 50px 0;
+  .sidebar {
+    margin-left: 25px;
+    @media only screen and (max-width: 900px) {
+      margin-left: 0;
+    }
+  }
+}
+
+.page-content {
+  padding: 30px;
+  background: #fff;
+  border-radius: 6px;
+  width: calc(100% - 300px);
+  @media only screen and (max-width: 900px) {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  h2, h3, h2, h4 {
+    margin: 25px 0;
+  }
+  p, li {
+    font-size: 16px;
+    line-height: 28px;
+    margin: 10px 0;
+  }
+  a {
+    color: $primary-color;
+  }
+  ul {
+    margin: 15px 0;
+  }
+}
+  

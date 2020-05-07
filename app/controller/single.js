@@ -32,7 +32,8 @@ let init = async (req, res, next) => {
         reposInfo: reposInfo[0],
         content: content,
         languages: constant.language,
-        tags: constant.tags
+        tags: constant.tags,
+        currentPage: ''
       };
       res.render('single', pageData);
     } else if(response.status === 404) {
@@ -42,7 +43,8 @@ let init = async (req, res, next) => {
         topic: topic,
         content: response.data.message,
         languages: constant.language,
-        tags: constant.tags
+        tags: constant.tags,
+        currentPage: ''
       };
       res.render('single', pageData);
     } else {
@@ -50,7 +52,8 @@ let init = async (req, res, next) => {
         searchTerm: req.query.search || '',
         topic: topic,
         languages: constant.language,
-        tags: constant.tags
+        tags: constant.tags,
+        currentPage: ''
       };
       res.render('not-found/index', pageData);
     }

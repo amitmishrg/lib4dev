@@ -14,7 +14,27 @@ module.exports = (app, config) => {
   app.get('/info/:owner/:topic/:id', singleCtrl.init);
 
   app.get('/about', (req, res) => {
-    res.render('about');
+    let pageData = {
+      searchTerm: '',
+      currentPage: 'about'
+    };
+    res.render('about', pageData);
+  });
+
+  app.get('/contact', (req, res) => {
+    let pageData = {
+      searchTerm: '',
+      currentPage: 'contact'
+    };
+    res.render('contact', pageData);
+  });
+
+  app.get('/privacy-policy', (req, res) => {
+    let pageData = {
+      searchTerm: '',
+      currentPage: 'privacy-policy'
+    };
+    res.render('privacy-policy', pageData);
   });
 
   app.get('*', function(req, res, next) {

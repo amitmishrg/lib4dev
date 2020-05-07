@@ -1,66 +1,32 @@
 .sidebar {
-  background: $secondary-color;
+  background: #ffffff;
   width: 300px;
-  position: fixed;
-  overflow-y: auto;
+  margin-left: 20px;
+  box-shadow: 1px 6px 10px rgba(164,164,164,.3);
+  border-radius: 4px;
   height: 100%;
-  @media only screen and (max-width: 900px) {
-      width: 250px;
-      transform: translateX(-250px);
-      z-index: 11;
-      &.show {
-        transform: translateX(0);
-      }
-  }
   .wrapper {
-    .logo-wrapper {
-      background: $secondary-color;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      border-bottom: 1px solid rgba(152,177,227,.16);
+    .fork-me {
+      background: #f1f1f1;
+      font-size: 12px;
+      padding: 5px 15px;
+      box-shadow: 1px 4px 12px rgba(164,164,164,.3);
       a {
-        padding: 10px;
         display: block;
-        @media only screen and (max-width: 900px) {
-          padding: 5px;
-        }
+        color: #484848;
+        padding: 0;
+        font-weight: bold;
+        text-decoration: none;
       }
-      img {
-        width: 50px;
-        width: 50px;
-         @media only screen and (max-width: 900px) {
-          width: 40px;
-          width: 40px
-        }
-      }
-      @media only screen and (max-width: 900px) {
-        padding: 10px 0;
-      }
-      .fork-me {
-        background: #f1f1f1;
-        position: absolute;
-        color: #fff;
-        top: 20px;
-        left: -28px;
-        z-index: 1;
-        transform: rotate(-45deg);
-        font-size: 8px;
-        padding: 5px 25px;
-        filter: blur(.3px);
-        box-shadow: 1px 4px 12px rgba(164,164,164,.3);
-        @media only screen and (max-width: 900px) {
-          display: none;
-        }
-        a {
-          display: block;
-          color: #484848;
-          padding: 0;
-          font-weight: bold;
-          text-decoration: none;
-        }
-      }
-
+    }
+  }
+  .widget {
+    padding: 15px 10px;
+    h4 {
+      font-size: 14px;
+      line-height: 22px;
+      font-weight: medium;
+      margin-bottom: 10px;
     }
   }
 }

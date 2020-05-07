@@ -6,9 +6,10 @@
       </a>
     </div>
     <ul>
-      <li><a href="/" class="link">Home</a></li>
-      <li><a href="/about" class="link">About</a></li>
-      <li><a href="/contact" class="link">Contact</a></li>
+      <li><a href="/" class="link <%= (currentPage === 'home') ? 'active': '' %>">Home</a></li>
+      <li><a href="/about" class="link <%= (currentPage === 'about') ? 'active': '' %>">About</a></li>
+      <li><a href="/contact" class="link <%= (currentPage === 'contact') ? 'active': '' %>">Contact</a></li>
+      <li><a href="/privacy-policy" class="link <%= (currentPage === 'privacy-policy') ? 'active': '' %>">Privacy Policy</a></li>
     </ul>
     <div class="loader">
       <img src="/svg/loader.svg" alt='loader' />

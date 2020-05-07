@@ -2,7 +2,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 0 10px 0 10px;
+  width: calc(100% - 300px);
+  @media only screen and (max-width: 900px) {
+      width: 100%;
+      margin-bottom: 30px;
+  }
 }
 .card-container {
   background: #FFFFFF;
@@ -11,20 +15,20 @@
   border-radius: 6px;
   position: relative;
   overflow: hidden;
-  width: calc(20% - 30px);
+  width: calc(20% - 10px);
   padding: 15px;
-  margin: 15px;
+  margin: 5px;
   @media only screen and (max-width: 1900px) {
-    width: calc(25% - 30px);
+    width: calc(25% - 10px);
   }
   @media only screen and (max-width: 1600px) {
-    width: calc(33.33% - 30px);
+    width: calc(33.33% - 10px);
   }
   @media only screen and (max-width: 1200px) {
-    width: calc(50% - 30px);
+    width: calc(50% - 10px);
   }
   @media only screen and (max-width: 575px) {
-    width: calc(100% - 30px);
+    width: calc(100% - 10px);
   }
   .promoted-bdr {
     background: $primary-color;
