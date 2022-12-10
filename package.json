@@ -18,7 +18,7 @@
     "compression": "^1.7.4",
     "connect-redis": "^3.3.2",
     "ejs": "^2.5.7",
-    "express": "^4.16.2",
+    "express": "^4.17.3",
     "express-session": "^1.15.6",
     "gulp": "^3.9.1",
     "gulp-csso": "^3.0.0",
